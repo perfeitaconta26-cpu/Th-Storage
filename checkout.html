@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Compra | TH-Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="TH-Store Logo" class="logo">
+    <h1>TH-Store</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="termos.html">Termos</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Finalizar Compra</h2>
+    <p>Entrega manual em até 24h quando possível</p>
+</section>
+
+<section class="info">
+    <div class="card" style="max-width:600px;">
+
+        <h3>Pagamento via Pix</h3>
+
+        <p style="margin-bottom:10px;">
+            Chave Pix (Email):
+        </p>
+
+        <div style="background:#000; padding:10px; border:1px solid #00aaff; border-radius:6px; margin-bottom:15px;">
+            <span id="pixKey">thzinfz933@gmail.com</span>
+        </div>
+
+        <button onclick="copiarPix()" class="btn-small">
+            Copiar Pix
+        </button>
+
+        <p id="copiadoMsg" style="margin-top:10px; color:#00aaff;"></p>
+
+        <hr style="margin:25px 0; border:0; border-top:1px solid #222;">
+
+        <h3>Como funciona?</h3>
+        <p style="margin-bottom:15px;">
+            1️⃣ Realize o pagamento via Pix.<br><br>
+            2️⃣ Envie o comprovante + seu nome do Roblox.<br><br>
+            3️⃣ Receba seus Tokens em até 24h.
+        </p>
+
+        <h3>Importante</h3>
+        <p style="margin-bottom:15px;">
+            • Verifique seu nome do Roblox antes de enviar.<br>
+            • Não realizamos reembolso após envio dos Tokens.<br>
+            • Atendimento oficial via TikTok.
+        </p>
+
+        <a href="https://www.tiktok.com/@cortesruyter65" target="_blank" class="btn">
+            Enviar Comprovante no TikTok
+        </a>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TH-Store • Loja confiável e segura</p>
+</footer>
+
+<script>
+function copiarPix() {
+    var chave = document.getElementById("pixKey").innerText;
+    navigator.clipboard.writeText(chave);
+    document.getElementById("copiadoMsg").innerText = "✅ Pix copiado com sucesso!";
+}
+</script>
+
+</body>
+</html>
