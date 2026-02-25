@@ -26,6 +26,15 @@
 <section class="info">
     <div class="card" style="max-width:600px;">
 
+        <!-- PRODUTO SELECIONADO -->
+        <div style="background:#111; padding:15px; border:1px solid #00aaff; border-radius:8px; margin-bottom:20px;">
+            <h3 style="margin-bottom:10px;">🛒 Produto Selecionado</h3>
+            <p id="produtoEscolhido" style="font-size:16px; color:#00aaff;">
+                Nenhum produto selecionado.
+            </p>
+        </div>
+
+        <!-- PIX -->
         <h3>Pagamento via Pix</h3>
 
         <p style="margin-bottom:10px;">
@@ -42,8 +51,16 @@
 
         <p id="copiadoMsg" style="margin-top:10px; color:#00aaff;"></p>
 
+        <!-- SELOS -->
+        <div style="margin-top:20px; font-size:14px; color:#00aaff;">
+            🔒 Compra 100% Segura <br>
+            ⚡ Entrega Rápida <br>
+            🛡 Atendimento Oficial
+        </div>
+
         <hr style="margin:25px 0; border:0; border-top:1px solid #222;">
 
+        <!-- COMO FUNCIONA -->
         <h3>Como funciona?</h3>
         <p style="margin-bottom:15px;">
             1️⃣ Realize o pagamento via Pix.<br><br>
@@ -58,12 +75,18 @@
             • Atendimento oficial via TikTok.
         </p>
 
+        <!-- BOTÃO TIKTOK -->
         <a href="https://www.tiktok.com/@cortesruyter65" target="_blank" class="btn">
             Enviar Comprovante no TikTok
         </a>
 
     </div>
 </section>
+
+<!-- ESCASSEZ -->
+<div style="text-align:center; margin:30px 0; color:#ff4444; font-weight:bold;">
+    ⚠ Promoção pode sair do ar a qualquer momento!
+</div>
 
 <footer>
     <p>© 2026 TH-Store • Loja confiável e segura</p>
@@ -75,6 +98,19 @@ function copiarPix() {
     navigator.clipboard.writeText(chave);
     document.getElementById("copiadoMsg").innerText = "✅ Pix copiado com sucesso!";
 }
+
+function carregarProduto() {
+    const params = new URLSearchParams(window.location.search);
+    const produto = params.get("produto");
+    const preco = params.get("preco");
+
+    if (produto && preco) {
+        document.getElementById("produtoEscolhido").innerHTML =
+            "Produto: <b>" + produto + "</b><br>Valor: <b>" + preco + "</b>";
+    }
+}
+
+carregarProduto();
 </script>
 
 </body>
