@@ -5,59 +5,109 @@
     <title>Produtos | TH-Store</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .popular {
+            border: 2px solid gold;
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: gold;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .urgencia {
+            text-align: center;
+            margin-top: 40px;
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .selos {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #00aaff;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo.png" alt="TH-Store Logo" class="logo">
-        <h1>TH-Store</h1>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="termos.html">Termos</a>
-        </nav>
-    </header>
+<header>
+    <img src="logo.png" alt="TH-Store Logo" class="logo">
+    <h1>TH-Store</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="termos.html">Termos</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <h2>Escolha seu Pacote de Tokens</h2>
-        <p>Fuja do Tsunami para Brainrot (Roblox)</p>
-    </section>
+<section class="hero">
+    <h2>Escolha seu Pacote de Tokens</h2>
+    <p>Fuja do Tsunami para Brainrot (Roblox)</p>
+</section>
 
-    <section class="info">
+<section class="info">
 
-        <div class="card">
-            <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
-            <h3>100 Tokens</h3>
-            <p>R$ 4,00</p>
-            <a href="checkout.html?produto=100tokens" class="btn-small">Comprar</a>
-        </div>
+    <div class="card">
+        <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
+        <h3>100 Tokens</h3>
+        <p>R$ 4,00</p>
+        <a href="checkout.html?produto=100%20Tokens&preco=R$4,00" class="btn-small">
+            Comprar
+        </a>
+    </div>
 
-        <div class="card">
-            <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
-            <h3>200 Tokens</h3>
-            <p>R$ 8,00</p>
-            <a href="checkout.html?produto=200tokens" class="btn-small">Comprar</a>
-        </div>
+    <div class="card">
+        <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
+        <h3>200 Tokens</h3>
+        <p>R$ 8,00</p>
+        <a href="checkout.html?produto=200%20Tokens&preco=R$8,00" class="btn-small">
+            Comprar
+        </a>
+    </div>
 
-        <div class="card">
-            <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
-            <h3>300 Tokens</h3>
-            <p>R$ 12,00</p>
-            <a href="checkout.html?produto=300tokens" class="btn-small">Comprar</a>
-        </div>
+    <div class="card popular">
+        <div class="badge">⭐ Mais Vendido</div>
+        <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
+        <h3>300 Tokens</h3>
+        <p>R$ 12,00</p>
+        <a href="checkout.html?produto=300%20Tokens&preco=R$12,00" class="btn-small">
+            Comprar
+        </a>
+    </div>
 
-        <div class="card">
-            <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
-            <h3>400 Tokens</h3>
-            <p>R$ 16,00</p>
-            <a href="checkout.html?produto=400tokens" class="btn-small">Comprar</a>
-        </div>
+    <div class="card">
+        <img src="token.png" alt="Token" style="width:80px; margin-bottom:15px;">
+        <h3>400 Tokens</h3>
+        <p>R$ 16,00</p>
+        <a href="checkout.html?produto=400%20Tokens&preco=R$16,00" class="btn-small">
+            Comprar
+        </a>
+    </div>
 
-    </section>
+</section>
 
-    <footer>
-        <p>© 2026 TH-Store • Tokens para Fuja do Tsunami</p>
-    </footer>
+<div class="selos">
+    🔒 Compra 100% Segura • ⚡ Entrega em até 24h • 🛡 Atendimento Oficial
+</div>
+
+<div class="urgencia">
+    ⚠ Promoção pode sair do ar a qualquer momento!
+</div>
+
+<footer>
+    <p>© 2026 TH-Store • Tokens para Fuja do Tsunami</p>
+</footer>
 
 </body>
 </html>
