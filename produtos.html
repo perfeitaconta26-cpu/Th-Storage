@@ -10,18 +10,26 @@
         .popular {
             border: 2px solid gold;
             position: relative;
+            transform: scale(1.05);
         }
 
         .badge {
             position: absolute;
-            top: -10px;
-            right: -10px;
+            top: -12px;
+            right: -12px;
             background: gold;
             color: black;
-            padding: 5px 10px;
-            border-radius: 15px;
+            padding: 6px 12px;
+            border-radius: 20px;
             font-size: 12px;
             font-weight: bold;
+        }
+
+        .contador-vendas {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #00ffcc;
         }
 
         .urgencia {
@@ -55,6 +63,10 @@
     <h2>Escolha seu Pacote de Tokens</h2>
     <p>Fuja do Tsunami para Brainrot (Roblox)</p>
 </section>
+
+<div class="contador-vendas">
+    🔥 +127 vendas realizadas com sucesso
+</div>
 
 <section class="info">
 
@@ -108,6 +120,36 @@
 <footer>
     <p>© 2026 TH-Store • Tokens para Fuja do Tsunami</p>
 </footer>
+
+<script>
+const produtos = ["100 Tokens", "200 Tokens", "300 Tokens", "400 Tokens"];
+const nomes = ["Lucas", "Ana", "Pedro", "Rafael", "Marcos", "Juliana"];
+
+function notificarCompra(){
+    const produto = produtos[Math.floor(Math.random() * produtos.length)];
+    const nome = nomes[Math.floor(Math.random() * nomes.length)];
+
+    const notificacao = document.createElement("div");
+    notificacao.innerHTML = "🟢 " + nome + " acabou de comprar " + produto;
+    notificacao.style.position = "fixed";
+    notificacao.style.bottom = "20px";
+    notificacao.style.left = "20px";
+    notificacao.style.background = "#111";
+    notificacao.style.padding = "10px 15px";
+    notificacao.style.border = "1px solid #00aaff";
+    notificacao.style.borderRadius = "8px";
+    notificacao.style.color = "#00aaff";
+    notificacao.style.boxShadow = "0 0 10px #00aaff";
+    notificacao.style.zIndex = "9999";
+    document.body.appendChild(notificacao);
+
+    setTimeout(() => {
+        notificacao.remove();
+    }, 4000);
+}
+
+setInterval(notificarCompra, 15000);
+</script>
 
 </body>
 </html>
